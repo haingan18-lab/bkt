@@ -1,0 +1,173 @@
+
+body {
+    background-color: #dedede;
+}
+
+h1 {
+    text-align: center;
+    font-family:Arial, sans-serif;
+    font-size: 32px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-family:Arial, sans-serif;
+}
+
+p {
+   font-size: 25px;
+   font-family:Arial, sans-serif;
+}
+
+img{
+  width:100%;
+}
+
+
+p{
+  text-align:center;
+}
+
+div img{
+    width:150px;
+    height: 150px;
+    display:block;
+    margin:auto;
+}
+
+div{
+  display: inline-block;
+  width: 24%;
+  margin: 5px;
+  padding: 2px;
+}
+
+/* ============================================================
+   1. Media Query cho Tablet / Màn hình vừa (>= 600px hoặc 768px)
+   ============================================================ */
+@media screen and (min-width: 600px) {
+  /* Điều chỉnh khung chứa (container) thành bố cục 2 cột nếu dùng Flexbox/Grid */
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Điều chỉnh kích thước các thẻ div con để nằm cạnh nhau (khoảng 48% - 50%) */
+  .container > div,
+  .gallery-item {
+    width: 48%;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Đảm bảo hình ảnh co giãn tốt bên trong thẻ div */
+  .gallery-item img,
+  div img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Tùy chọn kiểu dáng */
+  }
+}
+
+
+/* 
+main {
+    border: 5px #000 solid;
+    margin: 10px;
+}
+ */
+/* 
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+ */
+/* img{
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+} */
+
+/* .child {
+    position: relative;
+    display: inline-block;
+    border: 5px black solid;
+    margin: 5px;
+    border-radius: 5px;
+} */
+
+/* 
+
+.label {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+} */
+/* 
+.button {
+    display: inline-block;
+    border: 2px solid #000;
+    padding: 5px;
+    border-radius: 25px;
+}
+ */
+/* 
+.button:hover {
+    background-color:#fff;
+} */
+
+/* 
+footer {
+    display: flex;
+    justify-content: center;
+} */
+
+/* 
+header {
+    border-radius: 5px;
+    border: 5px #000 solid;
+    margin: 10px;
+} */
+
+/* 
+.label {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+} */
+/* 
+.child:hover .label {
+    display: block;
+} */
+
+/* ============================================================
+   2. Media Query cho Desktop / Màn hình lớn (>= 992px hoặc 1024px)
+   ============================================================ */
+@media screen and (min-width: 992px) {
+  /* Điều chỉnh layout container rộng hơn hoặc căn giữa */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+  }
+
+  /* Chia các thẻ div thành 3 hoặc 4 cột tùy yêu cầu video */
+  /* Nếu chia 3 cột: width khoảng 30% - 31% */
+  /* Nếu chia 4 cột: width khoảng 22% - 23% */
+  .container > div,
+  .gallery-item {
+    width: 23%;
+  }
+
+  /* Có thể thêm hiệu ứng hover cho hình ảnh trên máy tính */
+  .gallery-item img:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+  }
+}
